@@ -10,6 +10,7 @@ namespace AplicativoTesteAPI
 
             TxbRestClient.Text = "https://localhost:44307/";
             TxbRestRequest.Text = "Api/ObterDadosGerais/AdicionarUsuario";
+            CheckBoxGet.Checked = true;
         }
 
         private void BtnEnviarParaApi_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace AplicativoTesteAPI
 
         private void CheckBoxGet_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxGet.Checked)
+            if (CheckBoxGet.Checked && CheckBoxPost.Checked)
             {
                 CheckBoxGet.Checked = false;
             }
@@ -61,7 +62,7 @@ namespace AplicativoTesteAPI
 
         private void CheckBoxPost_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxPost.Checked)
+            if (CheckBoxPost.Checked && CheckBoxGet.Checked)
             {
                 CheckBoxPost.Checked = false;
             }
