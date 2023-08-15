@@ -175,9 +175,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(647, 493);
+            ClientSize = new Size(622, 399);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MaximumSize = new Size(638, 438);
+            MinimumSize = new Size(638, 438);
             Name = "FrmTeste";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

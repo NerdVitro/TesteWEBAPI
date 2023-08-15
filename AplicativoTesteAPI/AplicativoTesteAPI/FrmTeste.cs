@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using RestSharp;
 
 namespace AplicativoTesteAPI
@@ -10,7 +11,7 @@ namespace AplicativoTesteAPI
 
             TxbRestClient.Text = "https://localhost:44307/";
             TxbRestRequest.Text = "Api/ObterDadosGerais/AdicionarUsuario";
-            CheckBoxGet.Checked = true;
+            CheckBoxPost.Checked = true;
         }
 
         private void BtnEnviarParaApi_Click(object sender, EventArgs e)
@@ -27,9 +28,8 @@ namespace AplicativoTesteAPI
                 {
                     requisicao = new RestRequest(TxbRestRequest.Text, Method.Post);
                     requisicao.AddParameter("parNomeUsuario", TxbEnviar.Text, ParameterType.GetOrPost);
+                    //requisicao.AddHeader("authorization", "bearer " + AmbienteEvoDesk.Instance.TokenUsuarioLogado);
                 }
-
-                //requisicao.AddHeader("authorization", "bearer " + AmbienteEvoDesk.Instance.TokenUsuarioLogado);
 
                 RestResponse<string> resposta = restCliente.Execute<string>(requisicao);
 

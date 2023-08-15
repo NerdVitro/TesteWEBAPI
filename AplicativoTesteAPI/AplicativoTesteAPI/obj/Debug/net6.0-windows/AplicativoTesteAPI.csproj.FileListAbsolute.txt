@@ -20,3 +20,4 @@ D:\Repositorios C#\TesteWEBAPI\AplicativoTesteAPI\AplicativoTesteAPI\bin\Debug\n
 D:\Repositorios C#\TesteWEBAPI\AplicativoTesteAPI\AplicativoTesteAPI\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Repositorios C#\TesteWEBAPI\AplicativoTesteAPI\AplicativoTesteAPI\obj\Debug\net6.0-windows\AplicativoTesteAPI.FrmTeste.resources
 D:\Repositorios C#\TesteWEBAPI\AplicativoTesteAPI\AplicativoTesteAPI\obj\Debug\net6.0-windows\AplicativoTesteAPI.csproj.CopyComplete
+D:\Repositorios C#\TesteWEBAPI\AplicativoTesteAPI\AplicativoTesteAPI\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

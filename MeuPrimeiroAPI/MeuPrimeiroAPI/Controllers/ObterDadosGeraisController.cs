@@ -62,20 +62,21 @@ namespace MeuPrimeiroAPI.Controllers
 
         [HttpPost]
         [Route("AdicionarUsuario")]
-        public string AdicionarUsuario(string parNomeUsuario)
+        public string AdicionarUsuario([FromBody]string parNomeUsuario)
         {
-
-            Conexao conexao = new();
-            SqlCommand sqlcmd = new();
-
+            Conexao? conexao = null;
             try
             {
-                sqlcmd.CommandText =
+                conexao = new();
+                SqlCommand sqlcmd = new()
+                {
+                    CommandText =
                     @" INSERT INTO TBUSUARIO (NOMEUSUARIO)
                         VALUES
-                            (@NOMEUSUARIO)";
+                            (@NOMEUSUARIO)",
 
-                sqlcmd.Connection = conexao.Conectar();
+                    Connection = conexao.Conectar()
+                };
 
                 sqlcmd.Parameters.Clear();
                 sqlcmd.Parameters.AddWithValue("@NOMEUSUARIO", parNomeUsuario);
@@ -89,7 +90,7 @@ namespace MeuPrimeiroAPI.Controllers
             }
             finally
             {
-                conexao.Desconectar();
+                conexao?.Desconectar();
             }
         }
     }
